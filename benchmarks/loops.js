@@ -20,9 +20,87 @@ suite.add({
         }
     }
 }).add({
+    name: 'loops#for-check-length-reverse',
+    fn: function () {
+        for (var i = arrayToLoop.length; i > 0; i--) {
+
+        }
+    }
+}).add({
     name: 'loops#for-static-length',
     fn: function () {
         for (var i = 0, il = arrayToLoop.length; i < il; i++) {
+
+        }
+    }
+}).add({
+    name: 'loops#for-static-length-reverse',
+    fn: function () {
+        for (var i = arrayToLoop.length, il = 0; i > il; i--) {
+
+        }
+    }
+}).add({
+    name: 'loops#doWhile-check-length',
+    fn: function () {
+        var i = 0;
+        do {
+            i++;
+        }
+        while (i < arrayToLoop.length);
+    }
+}).add({
+    name: 'loops#doWhile-check-length-reverse',
+    fn: function () {
+        var i = arrayToLoop.length;
+        do {
+            i--;
+        }
+        while (i > 0);
+    }
+}).add({
+    name: 'loops#doWhile-static-length',
+    fn: function () {
+        var i = 0;
+        const il = arrayToLoop.length;
+        do {
+            i++;
+        }
+        while (i < il);
+    }
+}).add({
+    name: 'loops#doWhile-static-length-reverse',
+    fn: function () {
+        var i = 0;
+        const il = arrayToLoop.length;
+        do {
+            i++;
+        }
+        while (i < il);
+    }
+}).add({
+    name: 'loops#while-check-length',
+    fn: function () {
+        var i = 0;
+
+        while (i < arrayToLoop.length) {
+            i++;
+        }
+    }
+}).add({
+    name: 'loops#while-static-length',
+    fn: function () {
+        var i = 0;
+        const il = arrayToLoop.length;
+
+        while (i < il) {
+            i++;
+        }
+    }
+}).add({
+    name: 'loops#for...in',
+    fn: function () {
+        for (var char in arrayToLoop) {
 
         }
     }
