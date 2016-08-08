@@ -1,0 +1,23 @@
+{
+  "name": "js-bench",
+  "version": "1.0.0",
+  "description": "I really like to know the performance differences of things, this allows me to do just that.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidTPate/js-bench.git"
+  },
+  "author": "David Pate <davidtpate@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidTPate/js-bench/issues"
+  },
+  "homepage": "https://github.com/DavidTPate/js-bench#readme",
+  "devDependencies": {
+    "beautify-benchmark": "^0.2.4",
+    "benchmark": "^2.1.1"
+  },
+  "scripts": {
+    "bench": "node benchmarks/index.js"
+  }
+}
