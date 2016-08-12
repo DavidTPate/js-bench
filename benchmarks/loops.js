@@ -105,6 +105,13 @@ suite.add({
         }
     }
 }).add({
+    name: 'loops#for...of',
+    fn: function () {
+        for (var char of arrayToLoop) {
+
+        }
+    }
+}).add({
     name: 'loops#forEach-function',
     fn: function () {
         arrayToLoop.forEach(function () {
