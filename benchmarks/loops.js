@@ -12,6 +12,12 @@ for (var i = 32, il = 127; i < il; i++) {
 // Get an array of characters.
 const arrayToLoop = String.fromCharCode.apply(null, [].concat(charCodes, charCodes, charCodes, charCodes, charCodes)).split('');
 
+function forEach(arr, func) {
+    for (var i = 0, il = arr.length; i < il; i++) {
+        func(arr[i]);
+    }
+}
+
 suite.add({
     name: 'loops#for-check-length',
     fn: function () {
@@ -110,6 +116,11 @@ suite.add({
         for (var char of arrayToLoop) {
 
         }
+    }
+}).add({
+    name: 'loops#customForEach-arrowFunction',
+    fn: function () {
+        forEach(arrayToLoop, () => {});
     }
 }).add({
     name: 'loops#forEach-function',
