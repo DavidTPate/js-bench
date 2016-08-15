@@ -136,6 +136,20 @@ suite.add({
 
         });
     }
+}).add({
+    name: 'loops#map-function',
+    fn: function () {
+        arrayToLoop.map(function () {
+
+        });
+    }
+}).add({
+    name: 'loops#map-arrowFunction',
+    fn: function () {
+        arrayToLoop.map(() => {
+
+        });
+    }
 }).on('cycle', function onCycle(event) {
     benchmarks.add(event.target);
 }).on('complete', function onComplete() {
