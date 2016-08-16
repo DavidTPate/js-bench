@@ -2,6 +2,8 @@
 const Benchmark = require('benchmark');
 const benchmarks = require('beautify-benchmark');
 const suite = new Benchmark.Suite;
+const lodash = require('lodash');
+const underscore = require('underscore');
 
 const charCodes = [];
 // Build a set of ASCII character codes from 32 (space) to 126 (tilde)
@@ -120,7 +122,8 @@ suite.add({
 }).add({
     name: 'loops#customForEach-arrowFunction',
     fn: function () {
-        forEach(arrayToLoop, () => {});
+        forEach(arrayToLoop, () => {
+        });
     }
 }).add({
     name: 'loops#forEach-function',
@@ -147,6 +150,34 @@ suite.add({
     name: 'loops#map-arrowFunction',
     fn: function () {
         arrayToLoop.map(() => {
+
+        });
+    }
+}).add({
+    name: 'lodash#forEach-function',
+    fn: function () {
+        lodash.forEach(arrayToLoop, function () {
+
+        });
+    }
+}).add({
+    name: 'lodash#forEach-arrowFunction',
+    fn: function () {
+        lodash.forEach(arrayToLoop, () => {
+
+        });
+    }
+}).add({
+    name: 'underscore#forEach-function',
+    fn: function () {
+        underscore.forEach(arrayToLoop, function () {
+
+        });
+    }
+}).add({
+    name: 'underscore#forEach-arrowFunction',
+    fn: function () {
+        underscore.forEach(arrayToLoop, () => {
 
         });
     }

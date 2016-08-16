@@ -19,5 +19,9 @@
   },
   "scripts": {
     "bench": "node benchmarks/index.js"
+  },
+  "dependencies": {
+    "lodash": "^4.15.0",
+    "underscore": "^1.8.3"
   }
 }
